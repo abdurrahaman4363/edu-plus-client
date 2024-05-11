@@ -6,7 +6,7 @@ import Navbar from "../Pages/Shared/Navbar/Navbar";
 const Dashboard = () => {
     return (
         <div>
-        <Navbar></Navbar>
+            <Navbar></Navbar>
 
             <div className="drawer lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -40,7 +40,7 @@ const Dashboard = () => {
                         </li>
                         <li>
                             <NavLink to="/dashboard/teachers">
-                                <FaHome></FaHome>
+                                <FaUsers></FaUsers>
                                 Teachers</NavLink>
                         </li>
                     </ul>
