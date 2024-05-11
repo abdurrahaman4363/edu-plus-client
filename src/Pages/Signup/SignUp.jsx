@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import img from '../../assets/Images/banner/banner_1.jpg'
+import img from '../../assets/Images/login/signUp.png'
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 
@@ -7,7 +7,7 @@ const SignUp = () => {
 
     const { createUser } = useContext(AuthContext);
     const navigate = useNavigate();
-    
+
 
     const handleSignUp = event => {
         event.preventDefault();
@@ -31,6 +31,7 @@ const SignUp = () => {
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row">
+
                 <div className="w-1/2 mr-12">
                     <img src={img} alt="" />
                 </div>
@@ -60,7 +61,7 @@ const SignUp = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn btn-primary" type="submit" value="Sign Up" />
+                                <input className="btn bg-[#27374D] text-white" type="submit" value="Sign Up" />
                             </div>
                         </form>
                         <p className='my-4 text-center'>Already Have an Account? <Link className='text-orange-600 font-bold' to="/login">Login</Link> </p>

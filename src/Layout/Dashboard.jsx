@@ -6,7 +6,7 @@ import Navbar from "../Pages/Shared/Navbar/Navbar";
 const Dashboard = () => {
     return (
         <div>
-        <Navbar></Navbar>
+            <Navbar></Navbar>
 
             <div className="drawer lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -14,8 +14,8 @@ const Dashboard = () => {
 
                 <div className="drawer-content flex flex-col">
                     {/* Page content here   
-           drawer-content flex flex-col items-center justify-center
-         */}
+                    drawer-content flex flex-col items-center justify-center
+         
 
                     <div className="flex flex-row justify-end mr-3">
                         <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">
@@ -23,13 +23,15 @@ const Dashboard = () => {
                         </label>
                     </div>
 
-                    <div className="flex flex-col items-center justify-center">
+                    */}
+
+                    <div className="flex flex-col items-center justify-center mt-16 md:mt-16 lg:mt-16">
                         <Outlet />
                     </div>
                 </div>
 
 
-                <div className="drawer-side mt-16 md:mt-16 lg:mt-0">
+                <div className="drawer-side mt-16 md:mt-16 lg:mt-16">
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
                     <ul className="menu p-4  w-60 min-h-full bg-base-200 text-base-content">
                         {/* Sidebar content here */}
