@@ -21,7 +21,6 @@ const Students = () => {
     };
     fetchStudents();
   }, []);
-  console.log(students.email);
 
   return (
     <table className="min-w-full divide-y divide-gray-200 overflow-x-auto">
