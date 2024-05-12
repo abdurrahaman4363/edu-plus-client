@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { FaAd, FaBars, FaBook, FaCalendar, FaEnvelope, FaHome, FaList, FaSearch, FaShoppingCart, FaUsers, FaUtensils } from "react-icons/fa";
+// import { FaAd, FaBars, FaBook, FaCalendar, FaEnvelope, FaHome, FaList, FaSearch, FaShoppingCart, FaUsers, FaUtensils } from "react-icons/fa";
 import Navbar from "../Pages/Shared/Navbar/Navbar";
+import { FaHome } from "react-icons/fa";
 
 
 const Dashboard = () => {

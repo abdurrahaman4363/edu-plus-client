@@ -2,6 +2,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import img from '../../assets/Images/login/signUp.png'
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
+import SocialLogin from '../../Components/SocialLogin/SocialLogin';
+import Swal from 'sweetalert2';
 
 const SignUp = () => {
 
@@ -22,6 +24,14 @@ const SignUp = () => {
             .then(result => {
                 const user = result.user;
                 console.log('created user', user)
+                
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'User created successfully.',
+                    showConfirmButton: false,
+                    timer: 2000
+                });
                 navigate('/dashboard')
             })
             .catch(error => console.log(error))
@@ -64,6 +74,7 @@ const SignUp = () => {
                                 <input className="btn bg-[#27374D] text-white" type="submit" value="Sign Up" />
                             </div>
                         </form>
+                        <SocialLogin></SocialLogin>
                         <p className='my-4 text-center'>Already Have an Account? <Link className='text-orange-600 font-bold' to="/login">Login</Link> </p>
                     </div>
                 </div>

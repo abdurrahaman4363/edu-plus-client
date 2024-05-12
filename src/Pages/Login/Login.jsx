@@ -2,6 +2,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../assets/Images/login/login.png'
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
+import SocialLogin from '../../Components/SocialLogin/SocialLogin';
+import Swal from 'sweetalert2';
 // import axios from 'axios';
 
 const Login = () => {
@@ -21,6 +23,13 @@ const Login = () => {
             .then(result => {
                 const loggedInUser = result.user;
                 console.log(loggedInUser);
+                Swal.fire({
+                    position: 'top-start',
+                    icon: 'success',
+                    title: 'User loggedin successfully.',
+                    showConfirmButton: false,
+                    timer: 2000
+                });
                 navigate('/dashboard')
 
             })
@@ -56,6 +65,7 @@ const Login = () => {
                                 <input className="btn bg-[#27374D] text-white" type="submit" value="Login" />
                             </div>
                         </form>
+                        <SocialLogin></SocialLogin>
                         <p className='my-4 text-center'>New to Edu Plus <Link className='text-orange-600 font-bold' to="/signup">Sign Up</Link> </p>
                     </div>
                 </div>
