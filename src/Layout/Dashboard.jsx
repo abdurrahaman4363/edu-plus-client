@@ -49,12 +49,6 @@ const Dashboard = () => {
                 Teachers
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/dashboard/students">
-                <FaHome></FaHome>
-                Students
-              </NavLink>
-            </li>
           </ul>
         </div>
       </div>
