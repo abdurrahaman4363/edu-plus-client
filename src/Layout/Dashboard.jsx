@@ -1,7 +1,8 @@
 import { NavLink, Outlet } from "react-router-dom";
 // import { FaAd, FaBars, FaBook, FaCalendar, FaEnvelope, FaHome, FaList, FaSearch, FaShoppingCart, FaUsers, FaUtensils } from "react-icons/fa";
 import Navbar from "../Pages/Shared/Navbar/Navbar";
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaUsers, } from "react-icons/fa";
+import { FaClipboardUser } from "react-icons/fa6";
 
 
 const Dashboard = () => {
@@ -48,7 +49,7 @@ const Dashboard = () => {
                                     <FaUsers />
                                     Teachers
                                 </summary>
-                                <ul className="shadow menu dropdown-content w-48">
+                                <ul className="shadow menu dropdown-content w-48 z-10">
                                     <li className="mb-1">
                                         <NavLink to="/dashboard/teachers" className="inline-flex items-center">
                                             Teacher List
@@ -58,6 +59,12 @@ const Dashboard = () => {
                                     <li className="mb-1"><a>Teacher Profile</a></li>
                                 </ul>
                             </details>
+                        </li>
+
+                        <li className="mb-1">
+                            <NavLink to="/dashboard/attendence">
+                                <FaClipboardUser></FaClipboardUser>
+                                Attendence</NavLink>
                         </li>
 
                     </ul>
