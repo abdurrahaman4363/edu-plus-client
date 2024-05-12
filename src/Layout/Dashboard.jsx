@@ -36,23 +36,26 @@ const Dashboard = () => {
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
                     <ul className="menu p-4  w-60 min-h-full bg-base-200 text-base-content">
                         {/* Sidebar content here */}
-                        <li>
+                        <li className="mb-1">
                             <NavLink to="/dashboard/employee">
                                 <FaHome></FaHome>
                                 Employee</NavLink>
                         </li>
 
-                        <li>
+                        <li className="mb-1">
                             <details className="dropdown">
                                 <summary className="">
-                                    <NavLink to="/dashboard/teachers" className="inline-flex items-center">
-                                        <FaUsers className="mr-2" />
-                                        Teacher
-                                    </NavLink>
+                                    <FaUsers />
+                                    Teachers
                                 </summary>
-                                <ul className="mr-10 shadow menu dropdown-content w-48">
-                                    <li><a>Teacher List</a></li>
-                                    <li><a>Teacher Profile</a></li>
+                                <ul className="shadow menu dropdown-content w-48">
+                                    <li className="mb-1">
+                                        <NavLink to="/dashboard/teachers" className="inline-flex items-center">
+                                            Teacher List
+                                        </NavLink>
+                                    </li>
+                                    <li className="mb-1"><a>Add Teacher</a></li>
+                                    <li className="mb-1"><a>Teacher Profile</a></li>
                                 </ul>
                             </details>
                         </li>
