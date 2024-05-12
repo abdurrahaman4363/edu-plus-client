@@ -1,49 +1,45 @@
-import {
-  createBrowserRouter,
-} from "react-router-dom";
-import Main from "../Layout/Main";
-import Home from "../Pages/Home/Home/Home";
-import Login from "../Pages/Login/Login";
-import SignUp from "../Pages/Signup/SignUp";
-import Dashboard from "../Layout/Dashboard";
-
-
+import { createBrowserRouter } from 'react-router-dom';
+import Main from '../Layout/Main';
+import Home from '../Pages/Home/Home/Home';
+import Login from '../Pages/Login/Login';
+import SignUp from '../Pages/Signup/SignUp';
+import Dashboard from '../Layout/Dashboard';
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Main></Main>,
     children: [
       {
         path: '/',
-        element: <Login></Login>
+        element: <Login></Login>,
       },
       {
         path: 'login',
-        element: <Login></Login>
+        element: <Login></Login>,
       },
       {
         path: 'signup',
-        element: <SignUp></SignUp>
-      },/*  */
-    ]
+        element: <SignUp></SignUp>,
+      } /*  */,
+    ],
   },
   {
-    path: "dashboard",
+    path: 'dashboard',
     element: <Dashboard></Dashboard>,
     children: [
       {
         path: 'employee',
-        element: <Home></Home>
+        element: <Home></Home>,
       },
       {
         path: 'teachers',
-        element: <Home></Home>
+        element: <Home></Home>,
       },
-      
-    ]
+      {
+        path: 'students',
+        element: <Home></Home>,
+      },
+    ],
   },
-
-
-
 ]);
