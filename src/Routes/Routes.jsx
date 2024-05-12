@@ -4,6 +4,7 @@ import Home from '../Pages/Home/Home/Home';
 import Login from '../Pages/Login/Login';
 import SignUp from '../Pages/Signup/SignUp';
 import Dashboard from '../Layout/Dashboard';
+import Students from '../Pages/Dashboard/Students/Students';
 
 export const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
       {
         path: 'teachers',
         element: <Home></Home>,
+      },
+      {
+        path: 'students',
+        element: <Students />,
       },
     ],
   },
