@@ -38,11 +38,22 @@ const Dashboard = () => {
                                 <FaHome></FaHome>
                                 Employee</NavLink>
                         </li>
+
                         <li>
-                            <NavLink to="/dashboard/teachers">
-                                <FaUsers></FaUsers>
-                                Teachers</NavLink>
+                            <details className="dropdown">
+                                <summary className="">
+                                    <NavLink to="/dashboard/teachers" className="inline-flex items-center">
+                                        <FaUsers className="mr-2" />
+                                        Teacher
+                                    </NavLink>
+                                </summary>
+                                <ul className="mr-10 shadow menu dropdown-content w-48">
+                                    <li><a>Teacher List</a></li>
+                                    <li><a>Teacher Profile</a></li>
+                                </ul>
+                            </details>
                         </li>
+
                     </ul>
 
                 </div>
