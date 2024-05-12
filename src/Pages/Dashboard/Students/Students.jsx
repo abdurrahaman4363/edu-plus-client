@@ -73,8 +73,8 @@ const Students = () => {
                 <div className="flex-shrink-0 h-10 w-10">
                   <img
                     className="h-10 w-10 rounded-full"
-                    src="https://i.pravatar.cc/150?img=1"
-                    alt=""
+                    src={student.image}
+                    alt={student.first_name}
                   />
                 </div>
                 <div className="ml-4">
