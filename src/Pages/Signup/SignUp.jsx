@@ -18,12 +18,24 @@ const SignUp = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-
         createUser(email, password)
             .then(result => {
                 const user = result.user;
+
                 console.log('created user', user)
-                
+
+                const username = 'rahaman';
+                const email = 'abdur.rahaman4363@gmail.com'
+                const password = '123456'
+
+                fetch(`https://edu-plus-server.onrender.com/accounts/register/`, {
+                    method: "POST",
+                    headers: { 'content-type': 'application/json' },
+                    body: JSON.stringify({username,email,password})
+                })
+                    .then(res => res.json())
+                    .then(data => console.log(data))
+
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
