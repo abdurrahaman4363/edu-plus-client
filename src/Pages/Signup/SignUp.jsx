@@ -14,10 +14,9 @@ const SignUp = () => {
     const handleSignUp = event => {
         event.preventDefault();
         const form = event.target;
-        const name = form.name.value;
+        // const  name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(name, email, password)
 
 
         createUser(email, password)
@@ -75,7 +74,7 @@ const SignUp = () => {
                             </div>
                         </form>
                         <SocialLogin></SocialLogin>
-                        <p className='my-4 text-center'>Already Have an Account? <Link className='text-orange-600 font-bold' to="/login">Login</Link> </p>
+                        <p className='my-4 text-center'>Already Have An Account? <Link className='text-orange-600 font-bold' to="/login">Login</Link> </p>
                     </div>
                 </div>
             </div>
