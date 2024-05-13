@@ -6,6 +6,8 @@ import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/Signup/SignUp";
 import Dashboard from "../Layout/Dashboard";
+import Teachers from "../Pages/Dashboard/Teachers/Teachers";
+import Attendence from "../Pages/Dashboard/Attendence/Attendence";
 
 
 
@@ -25,7 +27,7 @@ export const router = createBrowserRouter([
       {
         path: 'signup',
         element: <SignUp></SignUp>
-      },/*  */
+      },
     ]
   },
   {
@@ -38,9 +40,13 @@ export const router = createBrowserRouter([
       },
       {
         path: 'teachers',
-        element: <Home></Home>
+        element: <Teachers></Teachers>
       },
-      
+      {
+        path: 'attendence',
+        element: <Attendence></Attendence>
+      },
+
     ]
   },
 
