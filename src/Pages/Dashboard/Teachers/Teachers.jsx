@@ -25,6 +25,7 @@ const Teachers = () => {
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* <h1>This is teacher list </h1> */}
             {teachers.map((teacher) => (
                 <div key={teacher.teacher_ID} className="max-w-md p-8 sm:flex sm:space-x-6 dark:bg-gray-50 dark:text-gray-800 shadow-lg rounded-lg transition-transform transform hover:scale-105">
                     <div className="avatar">
