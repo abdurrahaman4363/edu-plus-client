@@ -7,6 +7,7 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/Signup/SignUp";
 import Dashboard from "../Layout/Dashboard";
 import Attendence from "../Pages/Dashboard/Attendence/Attendence";
+import Teachers from "../Pages/Dashboard/Teachers/Teachers";
 
 
 
@@ -39,7 +40,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'teachers',
-        element: <Home></Home>,
+        element: <Teachers></Teachers>,
       },
       {
         path: 'attendence',
