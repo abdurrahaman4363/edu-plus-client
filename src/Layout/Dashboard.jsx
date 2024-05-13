@@ -50,21 +50,27 @@ const Dashboard = () => {
                 Teachers
               </NavLink>
             </li>
+            
             <li>
               <details className="dropdown">
+
                 <summary className="">
                   <NavLink to="/dashboard" className="inline-flex items-center">
                     <PiStudentDuotone className="mr-2" />
                     Students
                   </NavLink>
                 </summary>
+
                 <ul className="mr-10 shadow menu dropdown-content w-48">
+
                   <li>
                     <NavLink to="/dashboard/students">Student List</NavLink>
                   </li>
+
                   <li>
                     <a>Students Profile</a>
                   </li>
+
                 </ul>
               </details>
             </li>
