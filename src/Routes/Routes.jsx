@@ -6,23 +6,22 @@ import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/Signup/SignUp";
 import Dashboard from "../Layout/Dashboard";
-import Teachers from "../Pages/Dashboard/Teachers/Teachers";
 import Attendence from "../Pages/Dashboard/Attendence/Attendence";
 
 
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Main></Main>,
     children: [
       {
         path: '/',
-        element: <Login></Login>
+        element: <Login></Login>,
       },
       {
         path: 'login',
-        element: <Login></Login>
+        element: <Login></Login>,
       },
       {
         path: 'signup',
@@ -31,25 +30,22 @@ export const router = createBrowserRouter([
     ]
   },
   {
-    path: "dashboard",
+    path: 'dashboard',
     element: <Dashboard></Dashboard>,
     children: [
       {
         path: 'employee',
-        element: <Home></Home>
+        element: <Home></Home>,
       },
       {
         path: 'teachers',
-        element: <Teachers></Teachers>
+        element: <Home></Home>,
       },
       {
         path: 'attendence',
         element: <Attendence></Attendence>
       },
-
-    ]
+  
+    ],
   },
-
-
-
 ]);
