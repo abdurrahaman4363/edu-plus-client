@@ -87,13 +87,17 @@ const Dashboard = () => {
                                 <FaUsers />
                                 Teachers
                             </summary>
-                            <ul className="shadow menu  w-48 ">
+                            <ul className="shadow menu w-48">
                                 <li className="mb-1">
                                     <NavLink to="/dashboard/teachers" className="inline-flex items-center">
                                         Teacher List
                                     </NavLink>
                                 </li>
-                                <li className="mb-1"><a>Add Teacher</a></li>
+                                <li className="mb-1">
+                                    <NavLink to="/dashboard/add_teachers" className="inline-flex items-center">
+                                        Add Teacher
+                                    </NavLink>
+                                </li>
                                 <li className="mb-1"><a>Teacher Profile</a></li>
                             </ul>
                         </details>
