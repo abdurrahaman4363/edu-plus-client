@@ -9,6 +9,7 @@ import Dashboard from "../Layout/Dashboard";
 import Attendence from "../Pages/Dashboard/Attendence/Attendence";
 import Teachers from "../Pages/Dashboard/Teachers/Teachers";
 import Students from "../Pages/Dashboard/Students/Students";
+import AddTeachers from "../Pages/Dashboard/Teachers/AddTeachers";
 
 
 
@@ -46,6 +47,10 @@ export const router = createBrowserRouter([
         element: <Teachers></Teachers>,
       },
       {
+        path: 'add_teachers',
+        element: <AddTeachers></AddTeachers>
+      },
+      {
         path: 'attendence',
         element: <Attendence></Attendence>
       },
@@ -55,7 +60,7 @@ export const router = createBrowserRouter([
         path: 'students',
         element: <Students></Students>
       },
-  
+
     ],
   },
 ]);
