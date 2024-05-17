@@ -57,7 +57,11 @@ const Dashboard = () => {
                                             Add Teacher
                                         </NavLink>
                                     </li>
-                                    <li className="mb-1"><a>Teacher Profile</a></li>
+                                    <li className="mb-1">
+                                        <NavLink to="/dashboard/teacher_profile/:teacherId" className="inline-flex items-center">
+                                            Teacher Profile
+                                        </NavLink>
+                                    </li>
                                 </ul>
                             </details>
                         </li>

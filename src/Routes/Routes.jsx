@@ -10,6 +10,7 @@ import Attendence from "../Pages/Dashboard/Attendence/Attendence";
 import Teachers from "../Pages/Dashboard/Teachers/Teachers";
 import Students from "../Pages/Dashboard/Students/Students";
 import AddTeachers from "../Pages/Dashboard/Teachers/AddTeachers";
+import TeacherProfile from "../Pages/Dashboard/Teachers/TeacherProfile";
 
 
 
@@ -49,6 +50,10 @@ export const router = createBrowserRouter([
       {
         path: 'add_teachers',
         element: <AddTeachers></AddTeachers>
+      },
+      {
+        path: "teacher_profile/:teacherId",
+        element: <TeacherProfile></TeacherProfile>
       },
       {
         path: 'attendence',
