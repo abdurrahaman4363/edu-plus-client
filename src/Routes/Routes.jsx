@@ -9,7 +9,6 @@ import Dashboard from "../Layout/Dashboard";
 import Attendence from "../Pages/Dashboard/Attendence/Attendence";
 import Teachers from "../Pages/Dashboard/Teachers/Teachers";
 import Students from "../Pages/Dashboard/Students/Students";
-import AddTeacher from "../Pages/Dashboard/Teachers/AddTeacher";
 
 
 
@@ -45,10 +44,6 @@ export const router = createBrowserRouter([
       {
         path: 'teachers',
         element: <Teachers></Teachers>,
-      },
-      {
-        path: 'add_teachers',
-        element: <AddTeacher></AddTeacher>,
       },
       {
         path: 'attendence',
