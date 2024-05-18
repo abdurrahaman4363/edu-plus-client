@@ -1,6 +1,6 @@
 import { FaGoogle } from "react-icons/fa";
 import useAuth from "../../Hooks/useAuth";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 
@@ -10,17 +10,21 @@ import { useNavigate } from "react-router-dom";
 const SocialLogin = () => {
     const { googleSignIn } = useAuth();
     const navigate = useNavigate()
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/dashboard";
    
 
     const handleGoogleSignIn = () =>{
         googleSignIn()
         .then(result =>{
             console.log(result.user);
-         /* {   const userInfo = {
+     {  /*    {   const userInfo = {
                 email: result.user?.email,
                 name: result.user?.displayName
-            }} */
-            navigate('/dashboard')
+            }} 
+            console.log(result.user?.password); */}
+            navigate(from, { replace: true });
+            // navigate('/dashboard')
     
         })
     }

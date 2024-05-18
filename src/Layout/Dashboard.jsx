@@ -1,7 +1,7 @@
 import { NavLink, Outlet } from 'react-router-dom';
 // import { FaAd, FaBars, FaBook, FaCalendar, FaEnvelope, FaHome, FaList, FaSearch, FaShoppingCart, FaUsers, FaUtensils } from "react-icons/fa";
 import Navbar from '../Pages/Shared/Navbar/Navbar';
-import { FaHome, FaUsers } from 'react-icons/fa';
+import { FaHome, FaShapes, FaUsers } from 'react-icons/fa';
 import { PiStudentDuotone } from 'react-icons/pi';
 import { FaClipboardUser } from 'react-icons/fa6';
 
@@ -58,11 +58,36 @@ const Dashboard = () => {
               </details>
             </li>
 
+
+          { /*  couses start here  */}
+          <li className="mb-1">
+              <details className="dropdown">
+                <summary className="">
+                <FaShapes/>
+                  Courses
+                </summary>
+                <ul className="shadow menu w-48 ">
+                  <li className="mb-1">
+                    <NavLink to="/dashboard/courses" className="inline-flex items-center">
+                    Courses List
+                    </NavLink>
+                  </li>
+                  <li className="mb-1">
+                    <NavLink to="/dashboard/addCourses" className="inline-flex items-center">
+                    Add Course
+                    </NavLink>
+                  </li>
+                  
+                </ul>
+              </details>
+            </li>
+            { /*  couses end here  */}
+
             <li>
               <details className="dropdown">
 
                 <summary className="">
-                  <NavLink to="/dashboard" className="inline-flex items-center">
+                  <NavLink  className="inline-flex items-center">
                     <PiStudentDuotone className="mr-2" />
                     Students
                   </NavLink>

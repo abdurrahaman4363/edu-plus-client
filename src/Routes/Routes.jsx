@@ -9,6 +9,10 @@ import Dashboard from "../Layout/Dashboard";
 import Attendence from "../Pages/Dashboard/Attendence/Attendence";
 import Teachers from "../Pages/Dashboard/Teachers/Teachers";
 import Students from "../Pages/Dashboard/Students/Students";
+import PrivateRoute from "./PrivateRoute";
+import Courses from "../Pages/Dashboard/Courses/Courses";
+import AddCourse from "../Pages/Dashboard/Courses/AddCourse";
+import EditCourse from "../Pages/Dashboard/Courses/EditCourse";
 
 
 
@@ -33,7 +37,7 @@ export const router = createBrowserRouter([
   },
   {
     path: 'dashboard',
-    element: <Dashboard></Dashboard>,
+    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
     children: [
       {
         path: 'employee',
@@ -48,6 +52,19 @@ export const router = createBrowserRouter([
       {
         path: 'attendence',
         element: <Attendence></Attendence>
+      },
+      // abdur rahaman
+      {
+        path: 'courses',
+        element: <Courses></Courses>
+      },
+      {
+        path: 'addCourses',
+        element: <AddCourse></AddCourse>
+      },
+      {
+        path: 'editCourse/:id',
+        element: <EditCourse></EditCourse>
       },
 
       // mamun vai section 
