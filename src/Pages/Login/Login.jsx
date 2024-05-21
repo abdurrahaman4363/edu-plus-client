@@ -11,6 +11,10 @@ const Login = () => {
     const { signIn } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
+ 
+  
+    let from = location.state?.from?.pathname || "/dashboard";
+
     console.log(location)
 
     const handleLogin = event => {
@@ -30,7 +34,8 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 2000
                 });
-                navigate('/dashboard')
+                // navigate('/dashboard')
+                navigate(from, { replace: true });
 
             })
             .catch(error => console.log(error));

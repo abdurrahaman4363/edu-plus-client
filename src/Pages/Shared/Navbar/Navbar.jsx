@@ -1,18 +1,21 @@
 import { Link, useNavigate } from 'react-router-dom';
 import logo_1 from "../../../assets/Images/logo/logo_1.png"
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../../../Providers/AuthProvider';
 import { FaBars } from 'react-icons/fa';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const navigate = useNavigate()
+
+    const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
     const handleLogOut = () => {
         logOut()
             .then(() => {
                 navigate('/')
-             })
+            })
             .catch(error => console.log(error))
     }
 
@@ -57,14 +60,29 @@ const Navbar = () => {
 
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    
+
                 </ul>
             </div>
 
             <div className="navbar-end">
                 {user?.email ? <>
+                    <div className="relative ">
+                        <span onClick={toggleDropdown} className='rounded-full cursor-pointer'>
+                            <img style={{ height: '30px', width: '30px', borderRadius: '50%' }} src={user?.photoURL} alt="" />
+                        </span>
+                        {isDropdownOpen && (
+                            <div className="absolute top-10 right-0 bg-primary text-black rounded-md shadow-md">
+                                <ul className='list-none'>
+                                    <li className="w-full py-2 px-4 font-bold" onClick={handleLogOut} style={{ whiteSpace: 'nowrap' }}>
+                                        Log out
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
+                    </div>
 
-                    <button className="btn btn-sm mx-2" onClick={handleLogOut}>Log out</button>
+
+
                 </>
                     : <button className="btn btn-sm mx-2"><Link to="/login">Login</Link></button>
                 }
