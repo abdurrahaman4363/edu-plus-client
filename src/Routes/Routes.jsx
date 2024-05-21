@@ -13,6 +13,8 @@ import PrivateRoute from "./PrivateRoute";
 import Courses from "../Pages/Dashboard/Courses/Courses";
 import AddCourse from "../Pages/Dashboard/Courses/AddCourse";
 import EditCourse from "../Pages/Dashboard/Courses/EditCourse";
+import AddTeachers from "../Pages/Dashboard/Teachers/AddTeachers";
+import TeacherProfile from "../Pages/Dashboard/Teachers/TeacherProfile";
 
 
 
@@ -50,6 +52,14 @@ export const router = createBrowserRouter([
         element: <Teachers></Teachers>,
       },
       {
+        path: 'add_teachers',
+        element: <AddTeachers></AddTeachers>
+      },
+      {
+        path: "teacher_profile/:teacherId",
+        element: <TeacherProfile></TeacherProfile>
+      },
+      {
         path: 'attendence',
         element: <Attendence></Attendence>
       },
@@ -72,7 +82,7 @@ export const router = createBrowserRouter([
         path: 'students',
         element: <Students></Students>
       },
-  
+
     ],
   },
 ]);
