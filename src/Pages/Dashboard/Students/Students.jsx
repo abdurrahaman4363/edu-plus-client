@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Students = () => {
   const [students, setStudents] = useState([]);
@@ -62,6 +63,12 @@ const Students = () => {
           >
             Parent Name
           </th>
+          <th
+            scope="col"
+            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+          >
+            Update
+          </th>
         </tr>
       </thead>
       <tbody className="bg-white divide-y divide-gray-200">
@@ -100,6 +107,9 @@ const Students = () => {
             </td>
             <td className="px-6 py-4 whitespace-nowrap  text-sm font-medium">
               {student.parent_name}
+            </td>
+            <td className="px-6 py-4 whitespace-nowrap  text-sm font-medium">
+              <Link to={student.student_id}>Update</Link>
             </td>
           </tr>
         ))}
