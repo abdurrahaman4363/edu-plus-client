@@ -1,16 +1,17 @@
-import {
-  createBrowserRouter,
-} from "react-router-dom";
-import Main from "../Layout/Main";
-import Home from "../Pages/Home/Home/Home";
-import Login from "../Pages/Login/Login";
-import SignUp from "../Pages/Signup/SignUp";
-import Dashboard from "../Layout/Dashboard";
-import Attendence from "../Pages/Dashboard/Attendence/Attendence";
-import Teachers from "../Pages/Dashboard/Teachers/Teachers";
-import Students from "../Pages/Dashboard/Students/Students";
-
-
+import { createBrowserRouter } from 'react-router-dom';
+import Main from '../Layout/Main';
+import Home from '../Pages/Home/Home/Home';
+import Login from '../Pages/Login/Login';
+import SignUp from '../Pages/Signup/SignUp';
+import Dashboard from '../Layout/Dashboard';
+import Attendence from '../Pages/Dashboard/Attendence/Attendence';
+import Teachers from '../Pages/Dashboard/Teachers/Teachers';
+import Students from '../Pages/Dashboard/Students/Students';
+import StudentAdd from '../Pages/Dashboard/Students/StudentAdd';
+import StudentUpdate from '../Pages/Dashboard/Students/StudentUpdate';
+import Classes from '../Pages/Dashboard/Classes/Classes';
+import AddClasses from '../Pages/Dashboard/Classes/AddClasses';
+import UpdateClass from '../Pages/Dashboard/Classes/UpdateClass';
 
 export const router = createBrowserRouter([
   {
@@ -27,9 +28,9 @@ export const router = createBrowserRouter([
       },
       {
         path: 'signup',
-        element: <SignUp></SignUp>
+        element: <SignUp></SignUp>,
       },
-    ]
+    ],
   },
   {
     path: 'dashboard',
@@ -40,22 +41,42 @@ export const router = createBrowserRouter([
         element: <Home></Home>,
       },
 
-      // sharmin akter section 
+      // sharmin akter section
       {
         path: 'teachers',
         element: <Teachers></Teachers>,
       },
       {
         path: 'attendence',
-        element: <Attendence></Attendence>
+        element: <Attendence></Attendence>,
       },
 
-      // mamun vai section 
+      // mamun vai section
       {
         path: 'students',
-        element: <Students></Students>
+        element: <Students></Students>,
       },
-  
+      {
+        path: 'studentAdd',
+        element: <StudentAdd />,
+      },
+      {
+        path: 'studentUpdate/:id',
+        element: <StudentUpdate />,
+      },
+      // classes routes
+      {
+        path: 'allClass',
+        element: <Classes />,
+      },
+      {
+        path: 'AddClass',
+        element: <AddClasses />,
+      },
+      {
+        path: 'UpdateClass',
+        element: <UpdateClass />,
+      },
     ],
   },
 ]);

@@ -48,19 +48,25 @@ const Dashboard = () => {
                 </summary>
                 <ul className="shadow menu  w-48 ">
                   <li className="mb-1">
-                    <NavLink to="/dashboard/teachers" className="inline-flex items-center">
+                    <NavLink
+                      to="/dashboard/teachers"
+                      className="inline-flex items-center"
+                    >
                       Teacher List
                     </NavLink>
                   </li>
-                  <li className="mb-1"><a>Add Teacher</a></li>
-                  <li className="mb-1"><a>Teacher Profile</a></li>
+                  <li className="mb-1">
+                    <a>Add Teacher</a>
+                  </li>
+                  <li className="mb-1">
+                    <a>Teacher Profile</a>
+                  </li>
                 </ul>
               </details>
             </li>
 
             <li>
               <details className="dropdown">
-
                 <summary className="">
                   <NavLink to="/dashboard" className="inline-flex items-center">
                     <PiStudentDuotone className="mr-2" />
@@ -69,15 +75,43 @@ const Dashboard = () => {
                 </summary>
 
                 <ul className="mr-10 shadow menu  w-48">
-
                   <li>
                     <NavLink to="/dashboard/students">Student List</NavLink>
                   </li>
 
                   <li>
-                    <a>Students Profile</a>
+                    <NavLink to="/dashboard/studentAdd">Add Students</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/dashboard/studentUpdate/:id">
+                      Update Students
+                    </NavLink>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details className="dropdown">
+                <summary className="">
+                  <NavLink to="/dashboard" className="inline-flex items-center">
+                    <PiStudentDuotone className="mr-2" />
+                    Classes
+                  </NavLink>
+                </summary>
+
+                <ul className="mr-10 shadow menu  w-48">
+                  <li>
+                    <NavLink to="/dashboard/allClass">All Classes</NavLink>
                   </li>
 
+                  <li>
+                    <NavLink to="/dashboard/AddClass">Add Classes</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/dashboard/UpdateClass">
+                      Update Classes
+                    </NavLink>
+                  </li>
                 </ul>
               </details>
             </li>
@@ -85,9 +119,9 @@ const Dashboard = () => {
             <li className="mb-1">
               <NavLink to="/dashboard/attendence">
                 <FaClipboardUser></FaClipboardUser>
-                Attendence</NavLink>
+                Attendence
+              </NavLink>
             </li>
-
 
             <li>
               <NavLink to="/dashboard/employee">
@@ -95,8 +129,6 @@ const Dashboard = () => {
                 Employee
               </NavLink>
             </li>
-
-
           </ul>
         </div>
       </div>
